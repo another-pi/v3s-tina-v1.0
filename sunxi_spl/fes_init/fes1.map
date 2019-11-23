@@ -1,0 +1,280 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+                0x00002000                . = 0x2000
+                0x00002000                . = ALIGN (0x4)
+
+.head           0x00002000      0x2f8
+ main/fes_head.o(.rodata)
+ .rodata        0x00002000      0x2f8 main/fes_head.o
+                0x00002000                fes1_head
+
+.hash           0x000022f8       0x40
+ main/fes_hash.o(.data)
+ .data          0x000022f8       0x40 main/fes_hash.o
+                0x000022f8                fes_hash_value
+
+.config         0x00002338      0x200
+ main/fes_config.o(.data)
+ .data          0x00002338      0x200 main/fes_config.o
+                0x00002338                fes_config
+
+.text           0x00002538     0x2004
+ main/fes1_entry.o(.text)
+ .text          0x00002538       0x40 main/fes1_entry.o
+                0x00002538                _start
+ *(.text)
+ .text          0x00002578     0x1750 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                0x00002578                dram_udelay
+                0x0000257c                paraconfig
+                0x00002588                auto_set_timing_para
+                0x00002f3c                ccm_set_pll_ddr1_clk
+                0x00002f78                ccm_set_pll_ddr0_clk
+                0x00002fd8                mctl_sys_init
+                0x00003130                mctl_com_init
+                0x000031c0                dq_group_delay
+                0x000031f0                DRAMC_get_dram_size
+                0x00003218                auto_detect_dram_size
+                0x000033ac                dqs_dq_ac_ck_delay
+                0x00003498                mctl_channel_init
+                0x00003a70                dramc_simple_wr_test
+                0x00003ad0                init_DRAM
+                0x00003c4c                mctl_init
+ .text          0x00003cc8       0x40 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .text          0x00003d08      0x484 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+                0x00003d08                timer_init
+                0x00003d44                __msdelay
+                0x00003d5c                __usdelay
+                0x00003d74                timer_exit
+                0x00003d78                boot_set_gpio
+                0x00004000                sunxi_serial_init
+                0x00004078                sunxi_serial_putc
+                0x0000408c                sunxi_serial_getc
+                0x000040a0                sunxi_serial_tstc
+                0x000040b0                set_pll
+                0x00004160                reset_pll
+                0x0000417c                set_gpio_gate
+ .text          0x0000418c      0x3b0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+                0x000041b6                int_to_string_dec
+                0x00004216                int_to_string_hex
+                0x00004238                vsprintf
+                0x000042d6                puts
+                0x000042ea                sprintf
+                0x00004302                printf
+                0x00004334                strcpy
+                0x00004344                strncpy
+                0x00004358                strcat
+                0x00004374                strncat
+                0x000043a0                strcmp
+                0x000043b6                strncmp
+                0x000043d4                strchr
+                0x000043ec                strlen
+                0x000043fc                strrchr
+                0x0000441c                strnlen
+                0x00004432                strspn
+                0x00004456                memset
+                0x00004464                memcpy
+                0x00004476                memmove
+                0x000044ae                memcmp
+                0x000044ca                memscan
+                0x000044e2                strstr
+                0x00004516                memchr
+                0x00004530                boot0_jump
+ .text          0x0000453c        0x0 main/fes_head.o
+ .text          0x0000453c        0x0 main/fes_hash.o
+ .text          0x0000453c        0x0 main/fes_config.o
+
+.glue_7         0x0000453c        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x0000453c        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000453c        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x0000453c        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x0000453c        0x0
+ .iplt          0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+
+.text.startup   0x0000453c       0x70
+ .text.startup  0x0000453c       0x70 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+                0x0000453c                main
+                0x000045b0                . = ALIGN (0x10)
+
+.rodata         0x000045b0      0x111
+ *(.rodata)
+ .rodata        0x000045b0      0x100 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .rodata        0x000046b0       0x11 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+
+.rodata.str1.1  0x000046c1       0xde
+ .rodata.str1.1
+                0x000046c1       0x9a /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .rodata.str1.1
+                0x0000475b       0x44 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+
+.rel.dyn        0x000047a0        0x0
+ .rel.iplt      0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                0x000047a0                . = ALIGN (0x10)
+
+.data           0x000047a0        0x4
+ *(.data)
+ .data          0x000047a0        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .data          0x000047a0        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .data          0x000047a0        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .data          0x000047a0        0x4 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+                0x000047a0                debug_mode
+ .data          0x000047a4        0x0 main/fes_head.o
+ .data          0x000047a4        0x0 main/fes1_entry.o
+
+.igot.plt       0x000047a4        0x0
+ .igot.plt      0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                0x000047a4                . = ALIGN (0x4)
+
+.bss            0x000047a4        0x4
+                0x000047a4                __bss_start = .
+ *(.bss)
+ .bss           0x000047a4        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .bss           0x000047a4        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .bss           0x000047a4        0x4 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .bss           0x000047a8        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .bss           0x000047a8        0x0 main/fes_head.o
+ .bss           0x000047a8        0x0 main/fes_hash.o
+ .bss           0x000047a8        0x0 main/fes_config.o
+ .bss           0x000047a8        0x0 main/fes1_entry.o
+                0x000047a8                . = ALIGN (0x4)
+                0x000047a8                __bss_end = .
+                0x000047a8                _end = .
+OUTPUT(fes1.axf elf32-littlearm)
+
+.comment        0x00000000       0x64
+ .comment       0x00000000       0x64 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                                 0x65 (size before relaxing)
+ .comment       0x00000000       0x65 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .comment       0x00000000      0x194 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .comment       0x00000000      0x12f /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .comment       0x00000000       0x65 main/fes_head.o
+ .comment       0x00000000       0x65 main/fes_hash.o
+ .comment       0x00000000       0x65 main/fes_config.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .note.GNU-stack
+                0x00000000        0x0 main/fes_head.o
+ .note.GNU-stack
+                0x00000000        0x0 main/fes_hash.o
+ .note.GNU-stack
+                0x00000000        0x0 main/fes_config.o
+
+.ARM.attributes
+                0x00000000       0x3d
+ .ARM.attributes
+                0x00000000       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .ARM.attributes
+                0x0000003b       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .ARM.attributes
+                0x00000076       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .ARM.attributes
+                0x000000b1       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .ARM.attributes
+                0x000000ec       0x3b main/fes_head.o
+ .ARM.attributes
+                0x00000127       0x3b main/fes_hash.o
+ .ARM.attributes
+                0x00000162       0x3b main/fes_config.o
+ .ARM.attributes
+                0x0000019d       0x2d main/fes1_entry.o
+
+.debug_aranges  0x00000000      0x148
+ .debug_aranges
+                0x00000000       0x20 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_aranges
+                0x00000020       0x28 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .debug_aranges
+                0x00000048       0x80 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .debug_aranges
+                0x000000c8       0x60 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_aranges
+                0x00000128       0x20 main/fes1_entry.o
+
+.debug_info     0x00000000     0x2f4b
+ .debug_info    0x00000000      0xc40 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_info    0x00000c40      0x449 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .debug_info    0x00001089      0xeb5 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .debug_info    0x00001f3e      0xa7d /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_info    0x000029bb      0x378 main/fes_head.o
+ .debug_info    0x00002d33       0x95 main/fes_hash.o
+ .debug_info    0x00002dc8       0xff main/fes_config.o
+ .debug_info    0x00002ec7       0x84 main/fes1_entry.o
+
+.debug_abbrev   0x00000000      0xcee
+ .debug_abbrev  0x00000000      0x299 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_abbrev  0x00000299      0x112 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .debug_abbrev  0x000003ab      0x497 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .debug_abbrev  0x00000842      0x32b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_abbrev  0x00000b6d       0x9f main/fes_head.o
+ .debug_abbrev  0x00000c0c       0x4d main/fes_hash.o
+ .debug_abbrev  0x00000c59       0x81 main/fes_config.o
+ .debug_abbrev  0x00000cda       0x14 main/fes1_entry.o
+
+.debug_line     0x00000000     0x1597
+ .debug_line    0x00000000      0x902 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_line    0x00000902      0x122 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .debug_line    0x00000a24      0x4e3 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .debug_line    0x00000f07      0x46a /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_line    0x00001371       0xdf main/fes_head.o
+ .debug_line    0x00001450       0x2b main/fes_hash.o
+ .debug_line    0x0000147b       0xd1 main/fes_config.o
+ .debug_line    0x0000154c       0x4b main/fes1_entry.o
+
+.debug_frame    0x00000000      0x5e0
+ .debug_frame   0x00000000      0x1a8 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_frame   0x000001a8       0x44 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .debug_frame   0x000001ec      0x134 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .debug_frame   0x00000320      0x2c0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+
+.debug_str      0x00000000      0xbf0
+ .debug_str     0x00000000      0x47a /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                                0x4cd (size before relaxing)
+ .debug_str     0x0000047a      0x25f /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+                                0x381 (size before relaxing)
+ .debug_str     0x000006d9      0x319 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+                                0x77d (size before relaxing)
+ .debug_str     0x000009f2      0x19e /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+                                0x482 (size before relaxing)
+ .debug_str     0x00000b90       0x14 main/fes_head.o
+                                0x2f8 (size before relaxing)
+ .debug_str     0x00000ba4        0xb main/fes_hash.o
+                                0x116 (size before relaxing)
+ .debug_str     0x00000baf       0x41 main/fes_config.o
+                                0x169 (size before relaxing)
+
+.debug_loc      0x00000000     0x3c68
+ .debug_loc     0x00000000     0x2467 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_loc     0x00002467       0x88 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .debug_loc     0x000024ef      0xc1e /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o
+ .debug_loc     0x0000310d      0xb5b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+
+.debug_ranges   0x00000000      0x228
+ .debug_ranges  0x00000000      0x150 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_ranges  0x00000150       0x18 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/main/libmain.o
+ .debug_ranges  0x00000168       0xc0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/fes_init/spl/libsource_spl.o

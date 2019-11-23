@@ -1,0 +1,490 @@
+Archive member included because of file (symbol)
+
+/home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+                              /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o (__aeabi_llsl)
+/home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+                              /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o (__aeabi_uldivmod)
+/home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+                              /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+/home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+                              /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o) (__gnu_uldivmod_helper)
+/home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+                              /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o) (__divdi3)
+/home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+                              /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o) (__udivdi3)
+/home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+                              /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o) (__aeabi_uidiv)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+LOAD /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a
+                0x00000000                . = 0x0
+                0x00000000                . = ALIGN (0x4)
+
+.head           0x00000000      0x2f8
+ main/boot0_head.o(.rodata)
+ .rodata        0x00000000      0x2f8 main/boot0_head.o
+                0x00000000                BT0_head
+
+.hash           0x000002f8       0x40
+ main/boot0_hash.o(.data)
+ .data          0x000002f8       0x40 main/boot0_hash.o
+                0x000002f8                boot0_hash_value
+
+.config         0x00000338      0x200
+ main/boot0_config.o(.data)
+ .data          0x00000338      0x200 main/boot0_config.o
+                0x00000338                boot0_config
+                0x00000538                . = ALIGN (0x1)
+
+.text           0x00000538     0x4300
+ main/boot0_entry.o(.text)
+ .text          0x00000538       0x6c main/boot0_entry.o
+                0x00000538                _start
+ *(.text)
+ .text          0x000005a4     0x1750 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                0x000005a4                dram_udelay
+                0x000005a8                paraconfig
+                0x000005b4                auto_set_timing_para
+                0x00000f68                ccm_set_pll_ddr1_clk
+                0x00000fa4                ccm_set_pll_ddr0_clk
+                0x00001004                mctl_sys_init
+                0x0000115c                mctl_com_init
+                0x000011ec                dq_group_delay
+                0x0000121c                DRAMC_get_dram_size
+                0x00001244                auto_detect_dram_size
+                0x000013d8                dqs_dq_ac_ck_delay
+                0x000014c4                mctl_channel_init
+                0x00001a9c                dramc_simple_wr_test
+                0x00001afc                init_DRAM
+                0x00001c78                mctl_init
+ .text          0x00001cf4      0x28c /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+                0x00001cf4                check_magic
+                0x00001d0a                check_sum
+                0x00001d7c                check_file
+                0x00001da4                verify_addsum
+                0x00001e14                BOOT_NandGetPara
+                0x00001e28                get_page_buf
+                0x00001e30                g_mod
+                0x00001e54                set_dram_para
+                0x00001e70                cpu_init_s
+                0x00001e80                mmu_setup
+                0x00001ef4                mmu_turn_off
+                0x00001f24                raise
+                0x00001f28                __aeabi_unwind_cpp_pr0
+                0x00001f2c                set_debugmode_flag
+ .text          0x00001f80        0x2 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+                0x00001f80                bias_calibration
+ *fill*         0x00001f82        0x2 00
+ .text          0x00001f84      0x4c8 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+                0x00001f84                rtc_region_probe_fel_flag
+                0x00001fbc                rtc_region_clear_fel_flag
+                0x00001fc8                timer_init
+                0x00002004                __msdelay
+                0x0000201c                __usdelay
+                0x00002034                timer_exit
+                0x00002038                boot_set_gpio
+                0x000022c0                sunxi_serial_init
+                0x00002338                sunxi_serial_putc
+                0x0000234c                sunxi_serial_getc
+                0x00002360                sunxi_serial_tstc
+                0x00002370                set_pll
+                0x00002420                reset_pll
+                0x0000243c                set_gpio_gate
+ .text          0x0000244c      0x3b0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+                0x00002476                int_to_string_dec
+                0x000024d6                int_to_string_hex
+                0x000024f8                vsprintf
+                0x00002596                puts
+                0x000025aa                sprintf
+                0x000025c2                printf
+                0x000025f4                strcpy
+                0x00002604                strncpy
+                0x00002618                strcat
+                0x00002634                strncat
+                0x00002660                strcmp
+                0x00002676                strncmp
+                0x00002694                strchr
+                0x000026ac                strlen
+                0x000026bc                strrchr
+                0x000026dc                strnlen
+                0x000026f2                strspn
+                0x00002716                memset
+                0x00002724                memcpy
+                0x00002736                memmove
+                0x0000276e                memcmp
+                0x0000278a                memscan
+                0x000027a2                strstr
+                0x000027d6                memchr
+                0x000027f0                boot0_jump
+ .text          0x000027fc     0x1540 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+                0x00002d98                set_mmc_para
+                0x00002dd0                sunxi_mmc_init
+                0x00002ef8                sunxi_mmc_exit
+                0x00002f30                mmc_send_cmd
+                0x00002f3a                mmc_send_status
+                0x00002fbc                mmc_set_blocklen
+                0x00002fdc                find_mmc_device
+                0x00002ffc                mmc_read_blocks
+                0x00003090                mmc_bread
+                0x00003130                mmc_go_idle
+                0x00003170                sd_send_op_cond
+                0x00003270                mmc_send_op_cond
+                0x00003368                mmc_send_ext_csd
+                0x000033ac                mmc_switch
+                0x000033f4                mmc_change_freq
+                0x00003498                mmc_switch_part
+                0x000034c2                sd_switch
+                0x00003508                sd_change_freq
+                0x0000364c                mmc_set_ios
+                0x00003656                mmc_set_clock
+                0x00003672                mmc_set_bus_width
+                0x0000367e                mmc_startup
+                0x00003be4                mmc_send_if_cond
+                0x00003c40                mmc_init
+                0x00003d0c                mmc_register
+                0x00003d2c                mmc_unregister
+ .text          0x00003d3c      0x158 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+                0x00003d3c                load_boot1_from_sdmmc
+                0x00003e74                load_boot1
+ .text          0x00003e94       0x18 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+                0x00003e94                __ashldi3
+                0x00003e94                __aeabi_llsl
+ .text          0x00003eac       0x2c /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+                0x00003eac                __aeabi_uldivmod
+ .text          0x00003ed8        0xc /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+                0x00003ed8                __aeabi_ldiv0
+                0x00003ed8                __aeabi_idiv0
+ .text          0x00003ee4       0x5c /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+                0x00003ee4                __gnu_ldivmod_helper
+                0x00003f14                __gnu_uldivmod_helper
+ .text          0x00003f40      0x360 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+                0x00003f40                __divdi3
+ .text          0x000042a0      0x31c /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+                0x000042a0                __udivdi3
+ *fill*         0x000045bc        0x4 00
+ .text          0x000045c0      0x278 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+                0x000045c0                __udivsi3
+                0x000045c0                __aeabi_uidiv
+                0x0000481c                __aeabi_uidivmod
+ .text          0x00004838        0x0 main/boot0_head.o
+ .text          0x00004838        0x0 main/boot0_hash.o
+ .text          0x00004838        0x0 main/boot0_config.o
+
+.glue_7         0x00004838        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00004838        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00004838        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00004838        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00004838        0x0
+ .iplt          0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+
+.text.startup   0x00004838       0xf8
+ .text.startup  0x00004838       0xf8 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+                0x00004838                main
+                0x00004930                . = ALIGN (0x10)
+
+.rodata         0x00004930      0x174
+ *(.rodata)
+ .rodata        0x00004930      0x100 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .rodata        0x00004a30       0x11 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ *fill*         0x00004a41        0x3 00
+ .rodata        0x00004a44       0x60 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+
+.rodata.str1.1  0x00004aa4      0xd30
+ .rodata.str1.1
+                0x00004aa4       0x9a /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .rodata.str1.1
+                0x00004b3e       0x20 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+                                 0x28 (size before relaxing)
+ .rodata.str1.1
+                0x00004b5e       0xac /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .rodata.str1.1
+                0x00004c0a       0x28 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .rodata.str1.1
+                0x00004c32      0xa79 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .rodata.str1.1
+                0x000056ab      0x129 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+
+.ARM.extab      0x000057d4        0x0
+ .ARM.extab     0x000057d4        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .ARM.extab     0x000057d4        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .ARM.extab     0x000057d4        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+
+.ARM.exidx      0x000057d4       0x28
+ .ARM.exidx     0x000057d4       0x10 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .ARM.exidx     0x000057e4        0x8 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x000057ec       0x10 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+                                  0x8 (size before relaxing)
+
+.rel.dyn        0x000057fc        0x0
+ .rel.iplt      0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                0x00005800                . = ALIGN (0x10)
+
+.data           0x00005800        0x4
+ *(.data)
+ .data          0x00005800        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .data          0x00005800        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .data          0x00005800        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .data          0x00005800        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .data          0x00005800        0x4 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+                0x00005800                debug_mode
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+ .data          0x00005804        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .data          0x00005804        0x0 main/boot0_head.o
+ .data          0x00005804        0x0 main/boot0_entry.o
+
+.igot.plt       0x00005804        0x0
+ .igot.plt      0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                0x00005804                . = ALIGN (0x4)
+
+.bss            0x00005808      0x2b4
+                0x00005808                __bss_start = .
+ *(.bss)
+ .bss           0x00005808        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .bss           0x00005808        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .bss           0x00005808        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .bss           0x00005808        0x4 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .bss           0x0000580c        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ *fill*         0x0000580c        0x4 00
+ .bss           0x00005810      0x2ac /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+                0x00005810                mmc_host
+                0x00005888                mmc_dev
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+ .bss           0x00005abc        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .bss           0x00005abc        0x0 main/boot0_head.o
+ .bss           0x00005abc        0x0 main/boot0_hash.o
+ .bss           0x00005abc        0x0 main/boot0_config.o
+ .bss           0x00005abc        0x0 main/boot0_entry.o
+                0x00005abc                . = ALIGN (0x4)
+                0x00005abc                __bss_end = .
+                0x00005abc                _end = .
+OUTPUT(boot0_sdcard.axf elf32-littlearm)
+
+.comment        0x00000000       0x64
+ .comment       0x00000000       0x64 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                                 0x65 (size before relaxing)
+ .comment       0x00000000      0x1f9 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .comment       0x00000000       0x65 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .comment       0x00000000      0x1f9 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .comment       0x00000000      0x12f /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .comment       0x00000000       0xca /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .comment       0x00000000       0x65 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .comment       0x00000000       0x65 main/boot0_head.o
+ .comment       0x00000000       0x65 main/boot0_hash.o
+ .comment       0x00000000       0x65 main/boot0_config.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 main/boot0_head.o
+ .note.GNU-stack
+                0x00000000        0x0 main/boot0_hash.o
+ .note.GNU-stack
+                0x00000000        0x0 main/boot0_config.o
+
+.ARM.attributes
+                0x00000000       0x3f
+ .ARM.attributes
+                0x00000000       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .ARM.attributes
+                0x0000003b       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .ARM.attributes
+                0x00000076       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .ARM.attributes
+                0x000000b1       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .ARM.attributes
+                0x000000ec       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .ARM.attributes
+                0x00000127       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .ARM.attributes
+                0x00000162       0x3b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .ARM.attributes
+                0x0000019d       0x23 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .ARM.attributes
+                0x000001c0       0x23 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x000001e3       0x23 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x00000206       0x35 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x0000023b       0x35 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x00000270       0x35 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x000002a5       0x23 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000002c8       0x3b main/boot0_head.o
+ .ARM.attributes
+                0x00000303       0x3b main/boot0_hash.o
+ .ARM.attributes
+                0x0000033e       0x3b main/boot0_config.o
+ .ARM.attributes
+                0x00000379       0x2d main/boot0_entry.o
+
+.debug_aranges  0x00000000      0x268
+ .debug_aranges
+                0x00000000       0x20 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_aranges
+                0x00000020       0xa0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .debug_aranges
+                0x000000c0       0x28 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .debug_aranges
+                0x000000e8       0xa0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .debug_aranges
+                0x00000188       0x60 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_aranges
+                0x000001e8       0x40 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .debug_aranges
+                0x00000228       0x20 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .debug_aranges
+                0x00000248       0x20 main/boot0_entry.o
+
+.debug_info     0x00000000     0x7685
+ .debug_info    0x00000000      0xc40 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_info    0x00000c40     0x123d /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .debug_info    0x00001e7d      0x44d /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .debug_info    0x000022ca      0xfe0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .debug_info    0x000032aa      0xa7d /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_info    0x00003d27     0x2d30 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .debug_info    0x00006a57      0x6a0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .debug_info    0x000070f7      0x378 main/boot0_head.o
+ .debug_info    0x0000746f       0x95 main/boot0_hash.o
+ .debug_info    0x00007504       0xff main/boot0_config.o
+ .debug_info    0x00007603       0x82 main/boot0_entry.o
+
+.debug_abbrev   0x00000000     0x1a3e
+ .debug_abbrev  0x00000000      0x299 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_abbrev  0x00000299      0x3eb /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .debug_abbrev  0x00000684      0x116 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .debug_abbrev  0x0000079a      0x566 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .debug_abbrev  0x00000d00      0x32b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_abbrev  0x0000102b      0x773 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .debug_abbrev  0x0000179e      0x11f /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .debug_abbrev  0x000018bd       0x9f main/boot0_head.o
+ .debug_abbrev  0x0000195c       0x4d main/boot0_hash.o
+ .debug_abbrev  0x000019a9       0x81 main/boot0_config.o
+ .debug_abbrev  0x00001a2a       0x14 main/boot0_entry.o
+
+.debug_line     0x00000000     0x2716
+ .debug_line    0x00000000      0x902 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_line    0x00000902      0x642 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .debug_line    0x00000f44      0x139 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .debug_line    0x0000107d      0x5e5 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .debug_line    0x00001662      0x46a /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_line    0x00001acc      0x87a /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .debug_line    0x00002346      0x198 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .debug_line    0x000024de       0xe1 main/boot0_head.o
+ .debug_line    0x000025bf       0x2d main/boot0_hash.o
+ .debug_line    0x000025ec       0xd3 main/boot0_config.o
+ .debug_line    0x000026bf       0x57 main/boot0_entry.o
+
+.debug_frame    0x00000000      0xc84
+ .debug_frame   0x00000000      0x1a8 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_frame   0x000001a8      0x18c /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .debug_frame   0x00000334       0x3c /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .debug_frame   0x00000370      0x170 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .debug_frame   0x000004e0      0x2c0 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_frame   0x000007a0      0x3b4 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .debug_frame   0x00000b54       0x4c /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+ .debug_frame   0x00000ba0       0x54 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .debug_frame   0x00000bf4       0x38 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .debug_frame   0x00000c2c       0x38 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+ .debug_frame   0x00000c64       0x20 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/tools/external-toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+
+.debug_str      0x00000000     0x15f0
+ .debug_str     0x00000000      0x46b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+                                0x4cd (size before relaxing)
+ .debug_str     0x0000046b      0x420 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+                                0xe0e (size before relaxing)
+ .debug_str     0x0000088b       0xdf /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+                                0x390 (size before relaxing)
+ .debug_str     0x0000096a      0x35f /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+                                0x8d9 (size before relaxing)
+ .debug_str     0x00000cc9      0x198 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+                                0x482 (size before relaxing)
+ .debug_str     0x00000e61      0x614 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+                                0xbe6 (size before relaxing)
+ .debug_str     0x00001475      0x11a /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+                                0x4e8 (size before relaxing)
+ .debug_str     0x0000158f        0xd main/boot0_head.o
+                                0x2fe (size before relaxing)
+ .debug_str     0x0000159c        0xd main/boot0_hash.o
+                                0x117 (size before relaxing)
+ .debug_str     0x000015a9       0x47 main/boot0_config.o
+                                0x16e (size before relaxing)
+
+.debug_loc      0x00000000     0x64e9
+ .debug_loc     0x00000000     0x2467 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_loc     0x00002467      0x55e /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/libs/libgeneric.o
+ .debug_loc     0x000029c5       0x9b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .debug_loc     0x00002a60      0xc83 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .debug_loc     0x000036e3      0xb5b /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/spl/lib/libgeneric.o
+ .debug_loc     0x0000423e     0x21fa /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
+ .debug_loc     0x00006438       0xb1 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/load_mmc/libloadmmc.o
+
+.debug_ranges   0x00000000      0x528
+ .debug_ranges  0x00000000      0x150 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/dram/libdram.o
+ .debug_ranges  0x00000150       0x18 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/main/libmain.o
+ .debug_ranges  0x00000168       0xd8 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/sunxi_spl/boot0/spl/libsource_spl.o
+ .debug_ranges  0x00000240      0x2e8 /home/liwenting/HCFA/v3s/rainbow-pi-sdk-1/u-boot-2011.09/arch/arm/cpu/armv7/sun8iw8/mmc/libmmc.o
